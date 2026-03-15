@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(express.static("public"))
 
-app.get("/post", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/post.html");
 });
 
