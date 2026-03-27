@@ -6,325 +6,21 @@
     <title>Redes Sociais & Adolescentes | Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
-            color: white;
-            text-align: center;
-            padding: 120px 2rem 80px;
-            margin-top: 80px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .stats-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Posts Section */
-        .posts-section {
-            margin: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: white;
-        }
-
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .post-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .post-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .post-card:active {
-            transform: scale(0.98);
-        }
-
-        .post-image {
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-        }
-
-        .post-content {
-            padding: 2rem;
-        }
-
-        .post-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .post-excerpt {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .post-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            color: #999;
-        }
-
-        /* External Link Indicator */
-        .external-link-badge {
-            background: #ff6b6b;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 1rem;
-            text-decoration: none;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 2000;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 800px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .close-modal:hover {
-            color: #333;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .posts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <div class="logo">📱1° MKT 1</div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>O Uso de Redes Sociais pelos Adolescentes</h1>
         <p>Entenda os impactos, benefícios e desafios do uso das redes sociais na vida dos jovens de 13 a 19 anos.</p>
         <a href="#posts" class="cta-button">Leia os Artigos</a>
     </section>
 
-    <!-- Stats Section -->
     <div class="container">
         <section class="stats-section" id="stats">
             <div class="stat-card" data-toggle="modal" data-target="modal1">
@@ -349,11 +45,9 @@
             </div>
         </section>
 
-        <!-- Posts Section -->
         <section class="posts-section" id="posts">
-            <h2 class="section-title">🔥 Artigos Mais Lidos</h2>
+            <h2 class="section-title"> Artigos </h2>
             <div class="posts-grid">
-                <!-- ARTIGO 1 - REDIRECIONA PARA SEU SITE -->
                 <article class="post-card external-link" data-url="https://revistaft.com.br/saude-mental-os-impactos-das-redes-sociais-no-desenvolvimento-dos-jovens-brasileiros">
                     <div class="post-image">
                         <i class="fas fa-brain"></i>
@@ -362,13 +56,11 @@
                         <h3 class="post-title">Impacto das redes sociais no desenvolvimento cerebral</h3>
                         <p class="post-excerpt">Como o uso excessivo afeta a concentração, memória e tomada de decisões dos adolescentes...</p>
                         <div class="post-meta">
-                            <span><i class="fas fa-calendar"></i> 15 Jan 2024</span>
                             <a href="http://revistaft.com.br/saude-mental-os-impactos-das-redes-sociais-no-desenvolvimento-dos-jovens-brasileiros" class="external-link-badge">→ LEIA MAIS</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- ARTIGO 2 - REDIRECIONA PARA SEU SITE -->
                 <article class="post-card external-link" data-url="https://www.pewresearch.org/internet/2024/12/12/teens-social-media-and-technology-2024">
                     <div class="post-image">
                         <i class="fas fa-heart-broken"></i>
@@ -377,13 +69,11 @@
                         <h3 class="post-title">Cyberbullying: A face oculta das redes sociais</h3>
                         <p class="post-excerpt">Estatísticas alarmantes e estratégias para proteger os adolescentes do assédio online...</p>
                         <div class="post-meta">
-                            <span><i class="fas fa-calendar"></i> 12 Jan 2024</span>
                             <a href="https://www.pewresearch.org/internet/2024/12/12/teens-social-media-and-technology-2024" class="external-link-badge">→ LEIA MAIS</a>
                         </div>
                     </div>
                 </article>
 
-                <!-- ARTIGO 3 - REDIRECIONA PARA SEU SITE -->
                 <article class="post-card external-link" data-url="https://revistageo.com.br/revista/article/view/640">
                     <div class="post-image">
                         <i class="fas fa-users"></i>
@@ -392,7 +82,6 @@
                         <h3 class="post-title">Redes sociais e autoestima adolescente</h3>
                         <p class="post-excerpt">A busca pela validação social e seus efeitos na saúde mental dos jovens...</p>
                         <div class="post-meta">
-                            <span><i class="fas fa-calendar"></i> 10 Jan 2024</span>
                             <a href="https://revistageo.com.br/revista/article/view/640" class="external-link-badge">→ LEIA MAIS</a>
                         </div>
                     </div>
@@ -401,7 +90,6 @@
         </section>
     </div>
 
-    <!-- Modal para Estatísticas -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -409,14 +97,13 @@
         </div>
     </div>
 
-    <!-- Footer -->
+
     <footer id="contact">
         <p>&copy; 2026 turma 1° marketing 1 Carlos Drummond de Andrade. Todos os direitos reservados.</p>
         <p>Informações baseadas em estudos recentes sobre comportamento digital adolescente.</p>
     </footer>
 
     <script>
-        // Modal functionality 
 
         const modal = document.getElementById('modal');
 
@@ -425,31 +112,30 @@
         const closeModal = document.querySelector('.close-modal');
 
 
-        // Conteúdo das estatísticas 
 
         const modalContent = {
 
             modal1: {
 
-                title: "📊 95% dos adolescentes estão online diariamente",
+                title: " 95% dos adolescentes estão online diariamente",
 
                 content: `
 
-                    <p><strong>Fonte:</strong> Pesquisa Pew Research Center 2023</p>
-
                     <ul>
 
-                        <li>📱 Instagram: 62% dos adolescentes</li>
+                        <li> Instagram: 62% dos adolescentes</li>
 
-                        <li>📸 Snapchat: 59%</li>
+                        <li> Snapchat: 59%</li>
 
-                        <li>🎵 TikTok: 67%</li>
+                        <li> TikTok: 67%</li>
 
-                        <li>📺 YouTube: 93%</li>
+                        <li> YouTube: 93%</li>
 
                     </ul>
 
                     <p><strong>🚨 Alerta:</strong> Os adolescentes passam em média <strong>4h30 por dia</strong> nas redes sociais.</p>
+
+                    <p><strong>Fonte:</strong> Pesquisa Pew Research Center 2023</p>
 
                 `
 
@@ -457,7 +143,7 @@
 
             modal2: {
 
-                title: "⏰ 4h30 de tempo médio diário",
+                title: " 4h30 de tempo médio diário",
 
                 content: `
 
@@ -465,15 +151,16 @@
 
                     <ul>
 
-                        <li>💬 WhatsApp: 2h15</li>
+                        <li> WhatsApp: 2h15</li>
 
-                        <li>📷 Instagram: 1h45</li>
+                        <li> Instagram: 1h45</li>
 
-                        <li>🎬 TikTok: 1h30</li>
+                        <li> TikTok: 1h30</li>
 
                     </ul>
 
-                    <p><em>"O celular virou extensão do corpo adolescente"</em><br>- psicóloga clínica</p>
+
+                    <p><strong>Fonte:</strong> G1 Globo 2026</p>
 
                 `
 
@@ -481,11 +168,11 @@
 
             modal3: {
 
-                title: "😰 62% sentem pressão por imagem perfeita",
+                title: " 62% sentem pressão por imagem perfeita",
 
                 content: `
 
-                    <h4>🔍 Comparação social nas redes:</h4>
+                    <h4> Comparação social nas redes:</h4>
 
                     <ul>
 
@@ -497,7 +184,7 @@
 
                     </ul>
 
-                    <p><strong>💡 Solução:</strong> Educação digital nas escolas é essencial!</p>
+                    <p><strong>Fonte:</strong> psicologos SaoPaulo 2025 </p>
 
                 `
 
@@ -505,11 +192,11 @@
 
             modal4: {
 
-                title: "📚 78% relatam distração escolar",
+                title: " 78% relatam distração escolar",
 
                 content: `
 
-                    <p><strong>📉 Impactos comprovados:</strong></p>
+                    <p><strong> Impactos comprovados:</strong></p>
 
                     <ul>
 
@@ -521,7 +208,7 @@
 
                     </ul>
 
-                    <p><strong>🎯 Recomendação:</strong> "Modo foco" durante estudos</p>
+                    <p><strong>Fonte:</strong> UOL 2023 </p>
 
                 `
 
@@ -530,13 +217,9 @@
         };
 
 
-        // ===== FUNÇÕES PRINCIPAL =====
-
         document.addEventListener('DOMContentLoaded', function() {
 
             
-
-            // 1️⃣ Cards de ESTATÍSTICAS (abrem modal)
 
             document.querySelectorAll('.stat-card[data-toggle="modal"]').forEach(card => {
 
@@ -551,7 +234,6 @@
             });
 
 
-            // 3️⃣ Smooth scroll para navegação
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -580,8 +262,6 @@
         });
 
 
-        // Função para mostrar modal
-
         function showModal(content) {
 
             modalBody.innerHTML = `
@@ -599,7 +279,6 @@
         }
 
 
-        // Fechar modal
 
         closeModal.addEventListener('click', function() {
 
@@ -610,7 +289,6 @@
         });
 
 
-        // Fechar modal clicando fora
 
         window.addEventListener('click', function(event) {
 
@@ -625,7 +303,6 @@
         });
 
 
-        // Fechar com ESC
 
         document.addEventListener('keydown', function(event) {
 
@@ -640,7 +317,6 @@
         });
 
 
-        // Efeito de hover nos cards de artigo
 
         document.querySelectorAll('.post-card.external-link').forEach(card => {
 
@@ -661,6 +337,6 @@
         });
 
 
-        console.log('✅ Blog carregado! Clique nos artigos para redirecionar.');
+        console.log(' Blog carregado! Clique nos artigos para redirecionar.');
 
     </script>
